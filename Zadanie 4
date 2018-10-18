@@ -1,0 +1,71 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<Person> lista = new ArrayList<Person>();
+        Scanner scaner = new Scanner(System.in).useDelimiter("\\s");
+
+        System.out.println("Type stop to stop!");
+
+        while (true) {
+            String name = scaner.next();
+            if (name.equals("stop")) break;
+            String surname = scaner.next();
+            Person osoba = new Person(name.toLowerCase(), surname.toLowerCase());
+            int n = 0;
+            if (lista.size() > 0) {
+                for (int i = 0; i < lista.size(); i++) {
+                    if ((lista.get(i).getName().equals(osoba.getName())) && (lista.get(i).getSurname().equals(osoba.getSurname()))) {
+                        n++;
+                    }
+                }
+            }
+            osoba.setNumer(n);
+            System.out.println(osoba.mail());
+            lista.add(osoba);
+        }
+    }
+}
+
+public class Person {
+
+    private String name;
+    private String surname;
+    private int numer;
+
+
+    public Person(String name, String surname){
+        this.name = name;
+        this.surname = surname;
+    }
+
+    public Person(String surname) {
+        this("Andrzej", surname);
+    }
+
+    public String getName() {
+        return name;
+    }
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setNumer(int n) {
+        this.numer = n;
+    }
+
+    public String greet() {
+        return "Hi, I'm " + name + " " + surname;
+    }
+
+    public String mail() {
+        if (numer == 0)
+            return name + "." + surname + "@mex.com";
+        else
+            return name + "." + surname + numer + "@mex.com";
+    }
+
+}
