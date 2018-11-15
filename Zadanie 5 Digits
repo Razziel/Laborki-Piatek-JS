@@ -1,20 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @Razziel Sign out
-1
-0 0 LukaszLapaj/JavaCourse
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
-JavaCourse/lab04/Digits.java
-7612288  23 hours ago
-@LukaszLapaj LukaszLapaj Lab 4
-     
-61 lines (52 sloc)  1.4 KB
 class Digits {
     final static char[][] ZERO = new char[][]{
             {' ', '_', ' '},
@@ -76,16 +59,3 @@ class Digits {
             {' ', '_', '|'},
     };
 }
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Press h to open a hovercard with more details.
